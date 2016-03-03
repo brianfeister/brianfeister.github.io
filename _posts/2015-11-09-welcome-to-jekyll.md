@@ -10,12 +10,34 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight python %}
+
+import sys
+
+from .runtime import runtime as _runtime
+from . import api
+from . import api_utils
+
+
+# Start the SDK.
+def start (*args, **kwargs):
+  return _runtime.start(*args, **kwargs)
+
+{% endhighlight %}
+
+### Javascript highlighting
+
+{% highlight javascript %}
+mod.controller('LocationsSingleCtrl', singleCtrl);
+mod.config($stateProvider => {
+  $stateProvider.state('locations.single', {
+    url: '/:uuid',
+    title: (locals) => {
+      return `${ locals.location.name } - EXP`;
+    }
+  })
+});
+
 {% endhighlight %}
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
