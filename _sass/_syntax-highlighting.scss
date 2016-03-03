@@ -3,7 +3,7 @@
  */
 .highlight {
     background: #000;
-    pre { background: #000; }
+    pre, code { background: #000; }
     @extend %vertical-rhythm;
     .c { color: #c2b680; background-color: #272822 } /* Comment */
     .err { color: #dcdccc; background-color: #272822 } /* Error */
